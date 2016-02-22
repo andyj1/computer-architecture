@@ -24,37 +24,29 @@
 
 module paperprocessor();
 
-reg clk;
-wire s;       //status
-wire [1:0] c; //pc
-wire [1:0] r; //register;
-wire [1:0] a; //address
-wire [1:0] data; //data
-
-reg status;
-wire status_0;
-wire [1:0] count;
-wire [1:0] register;
-reg reset;
+reg clk;              //clock
+reg status;           //status
+wire [1:0] a;         //address
+wire [1:0] data;      //data
+wire [1:0] count;     //counter
+wire [1:0] register;  //register values
+reg reset;            //reset
 
 
-	initial fork
-		
-		clk = 0;	
+initial fork          //initialization run in parallel 
+	  clk = 0;	
 		reset = 1;
 		status = 0;
-		$monitor ( "time = %g   clk =%g status = %b count = %b register = %b a1 = %b a0 = %b data[1] = %b, data[0] = %b",
-			   $time, clk, status, count, register, a[1], a[0], data[1], data[0]);
-
-		#20 status=~status;
+		$monitor ( "clk =%g status = %b pc = %b register = %b addr=%b%b data = %b%b", clk, status, count, register, a[1], a[0], data[1], data[0]);
+		#20 status = ~status;
 		#22 $finish;   
-	join
+join
 
-initial begin
-	$dumpfile ("paperprocessor.vcd"); 
-    $dumpvars;
-end
-always begin
+initial
+	   $dumpfile ("paperprocessor.vcd");    //for waveform file in .vcd format
+    //$dumpvars;
+
+always begin                            //clock toggle
 	#1 clk = ~clk;
 end
 
@@ -70,22 +62,23 @@ module register(clk, status, count, register);
   parameter n = 1;
  
   output reg [n:0] register;
-  input [1:0] count;
+  input [n:0] count;
   input status, clk;
  
   // Set the initial value
   initial 
       register <= 2'b00;
 
-  always @(posedge clk) begin
+  always @(posedge clk) begin             //incrementing register values
     if ((status == 0) && (count == 01)) 
           register = register + 01;
     if(register == 11) 
-      register = register + 01;
+          register = register + 01;
 
     end
-  always @(posedge status)
+  always @(posedge status)                //when overflow, set register to 00
           register = 00;
+
 endmodule
 
 //-------setAddress module
@@ -95,8 +88,9 @@ input [1:0] counter;
 input status;
 output [1:0] address;
 
-wire [1:0] w;
+wire [1:0] w; 
 
+//determining address bits            
 and a1(w[0], counter[1], ~counter[0]);
 or data1(address[1], w[0], status);
 
@@ -112,32 +106,31 @@ input a1;
 input a0;
 output o1;
 output o0;
-wire [2:0] w;
 
-
-// o1
+//determining data based on the address
+// o1 MSB
 and a1(o1, a1, a0);
 
-//o0
+//o0 LSB
 and a2(o0, ~a1, a0);
 
 endmodule
 
 //-------counter module
-module counter(count, clk, rst_n);
+module counter(count, clk, rst);
   parameter n = 1;
  
   output reg [n:0] count;
   input clk;
-  input rst_n;
+  input rst;
  
   // Set the initial value
   initial
     count = 0;
  
   // Increment count on clock
-  always @(posedge clk or negedge rst_n)
-    if (!rst_n)
+  always @(posedge clk or negedge rst)
+    if (!rst)
       count = 0;
     else begin
       count = count + 1;
