@@ -1,0 +1,12 @@
+To compile on terminal: 
+	iverilog -o <name>.vvp paperprocessor.v
+
+To run the compiled object file:
+	vvp <name>.vvp
+
+To see the waveform using gtkwave simulator:
+	gtkwave paper.vcd
+
+To remove the object file:
+	rm paper.vvp
+

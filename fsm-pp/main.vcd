@@ -1,0 +1,130 @@
+$date
+	Mon Feb 22 00:53:19 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mainbench $end
+$var wire 1 ! sr $end
+$var wire 1 " roo1 $end
+$var wire 1 # roo0 $end
+$var wire 1 $ ro1 $end
+$var wire 1 % ro0 $end
+$var wire 1 & doo1 $end
+$var wire 1 ' doo0 $end
+$var wire 1 ( do1 $end
+$var wire 1 ) do0 $end
+$var wire 1 * aoo1 $end
+$var wire 1 + aoo0 $end
+$var wire 1 , ao1 $end
+$var wire 1 - ao0 $end
+$var reg 1 . a0 $end
+$var reg 1 / a1 $end
+$var reg 1 0 clock $end
+$var reg 1 1 d0 $end
+$var reg 1 2 d1 $end
+$var reg 1 3 r0 $end
+$var reg 1 4 r1 $end
+$var reg 1 5 rst $end
+$scope module address0 $end
+$var wire 1 . address_0 $end
+$var wire 1 / address_1 $end
+$var wire 1 - address_out_0 $end
+$var wire 1 , address_out_1 $end
+$var wire 1 0 clk $end
+$var wire 1 1 data_0 $end
+$var wire 1 2 data_1 $end
+$var wire 1 5 reset $end
+$var wire 5 6 w [4:0] $end
+$var wire 1 ! status $end
+$upscope $end
+$scope module data0 $end
+$var wire 1 - address_0 $end
+$var wire 1 , address_1 $end
+$var wire 1 0 clk $end
+$var wire 1 1 data_0 $end
+$var wire 1 2 data_1 $end
+$var wire 1 ) data_out_0 $end
+$var wire 1 ( data_out_1 $end
+$var wire 1 5 reset $end
+$var wire 1 ! status $end
+$upscope $end
+$scope module dff0 $end
+$var wire 1 0 clk $end
+$var wire 1 5 reset $end
+$var wire 1 % d $end
+$var reg 1 # q $end
+$upscope $end
+$scope module dff1 $end
+$var wire 1 0 clk $end
+$var wire 1 5 reset $end
+$var wire 1 $ d $end
+$var reg 1 " q $end
+$upscope $end
+$scope module dff2 $end
+$var wire 1 0 clk $end
+$var wire 1 - d $end
+$var wire 1 5 reset $end
+$var reg 1 + q $end
+$upscope $end
+$scope module dff3 $end
+$var wire 1 0 clk $end
+$var wire 1 , d $end
+$var wire 1 5 reset $end
+$var reg 1 * q $end
+$upscope $end
+$scope module dff4 $end
+$var wire 1 0 clk $end
+$var wire 1 ) d $end
+$var wire 1 5 reset $end
+$var reg 1 ' q $end
+$upscope $end
+$scope module dff5 $end
+$var wire 1 0 clk $end
+$var wire 1 ( d $end
+$var wire 1 5 reset $end
+$var reg 1 & q $end
+$upscope $end
+$scope module register0 $end
+$var wire 1 0 clk $end
+$var wire 1 ) data_0 $end
+$var wire 1 ( data_1 $end
+$var wire 1 3 register_0 $end
+$var wire 1 4 register_1 $end
+$var wire 1 % register_out_0 $end
+$var wire 1 $ register_out_1 $end
+$var wire 1 5 reset $end
+$var wire 1 ! status $end
+$var wire 3 7 w [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#1
+$dumpvars
+b0 7
+b11000 6
+05
+04
+03
+02
+01
+x0
+0/
+0.
+x-
+0,
+x+
+x*
+x)
+0(
+x'
+x&
+x%
+0$
+x#
+x"
+0!
+$end
