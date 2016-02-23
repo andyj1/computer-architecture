@@ -42,10 +42,10 @@ initial fork          //initialization run in parallel
 		#22 $finish;   
 join
 
-initial begin
+initial
 	   $dumpfile ("paperprocessor.vcd");    //for waveform file in .vcd format
-      $dumpvars;
-end
+    //$dumpvars;
+
 always begin                            //clock toggle
 	#1 clk = ~clk;
 end

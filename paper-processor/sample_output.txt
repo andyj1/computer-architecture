@@ -1,0 +1,24 @@
+VCD info: dumpfile paper.vcd opened for output.
+clk =0 s = 0 addr=00 reg = 00 data = 00
+clk =1 s = 0 addr=01 reg = 00 data = 01
+clk =0 s = 0 addr=01 reg = 00 data = 01
+clk =1 s = 0 addr=10 reg = 01 data = 00
+clk =0 s = 0 addr=10 reg = 01 data = 00
+clk =1 s = 0 addr=00 reg = 01 data = 00
+clk =0 s = 0 addr=00 reg = 01 data = 00
+clk =1 s = 0 addr=01 reg = 01 data = 01
+clk =0 s = 0 addr=01 reg = 01 data = 01
+clk =1 s = 0 addr=10 reg = 10 data = 00
+clk =0 s = 0 addr=10 reg = 10 data = 00
+clk =1 s = 0 addr=00 reg = 10 data = 00
+clk =0 s = 0 addr=00 reg = 10 data = 00
+clk =1 s = 0 addr=01 reg = 10 data = 01
+clk =0 s = 0 addr=01 reg = 10 data = 01
+clk =1 s = 0 addr=10 reg = 11 data = 00
+clk =0 s = 0 addr=10 reg = 11 data = 00
+clk =1 s = 0 addr=00 reg = 11 data = 00
+clk =0 s = 0 addr=00 reg = 11 data = 00
+clk =1 s = 0 addr=01 reg = 11 data = 01
+clk =0 s = 1 addr=11 reg = 00 data = 10
+clk =1 s = 1 addr=11 reg = 00 data = 10
+clk =0 s = 1 addr=11 reg = 00 data = 10
