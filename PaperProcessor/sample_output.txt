@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 VCD info: dumpfile pp.vcd opened for output.
 time = 0         PC = xx instruct = xx out = 00 stat = 0
 time = 1         PC = 00 instruct = 00 out = 00 stat = 0
@@ -15,4 +16,23 @@ time = 46        PC = 00 instruct = 00 out = 11 stat = 0
 time = 53        PC = 01 instruct = 01 out = 11 stat = 0
 time = 54        PC = 01 instruct = 01 out = 00 stat = 1
 time = 61        PC = 10 instruct = 00 out = 00 stat = 1
+=======
+VCD info: dumpfile pp.vcd opened for output.
+time = 0         PC = xx instruct = xx out = 00 stat = 0
+time = 1         PC = 00 instruct = 00 out = 00 stat = 0
+time = 5         PC = 01 instruct = 01 out = 01 stat = 0
+time = 13        PC = 10 instruct = 00 out = 01 stat = 0
+time = 14        PC = 00 instruct = 00 out = 01 stat = 0
+time = 21        PC = 01 instruct = 01 out = 01 stat = 0
+time = 22        PC = 01 instruct = 01 out = 10 stat = 0
+time = 29        PC = 10 instruct = 00 out = 10 stat = 0
+time = 30        PC = 00 instruct = 00 out = 10 stat = 0
+time = 37        PC = 01 instruct = 01 out = 10 stat = 0
+time = 38        PC = 01 instruct = 01 out = 11 stat = 0
+time = 45        PC = 10 instruct = 00 out = 11 stat = 0
+time = 46        PC = 00 instruct = 00 out = 11 stat = 0
+time = 53        PC = 01 instruct = 01 out = 11 stat = 0
+time = 54        PC = 01 instruct = 01 out = 00 stat = 1
+time = 61        PC = 10 instruct = 00 out = 00 stat = 1
+>>>>>>> 4c719c418537323adcdba306372967a5ab19167a
 time = 69        PC = 11 instruct = 10 out = 00 stat = 1
