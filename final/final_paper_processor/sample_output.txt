@@ -1,0 +1,15 @@
+VCD info: dumpfile pp_2bit.vcd opened for output.
+PC = xx instr = xx reg = 00 status = 0
+PC = 00 instr = 00 reg = 00 status = 0
+PC = 01 instr = 01 reg = 01 status = 0
+PC = 10 instr = 00 reg = 01 status = 0
+PC = 00 instr = 00 reg = 01 status = 0
+PC = 01 instr = 01 reg = 10 status = 0
+PC = 10 instr = 00 reg = 10 status = 0
+PC = 00 instr = 00 reg = 10 status = 0
+PC = 01 instr = 01 reg = 11 status = 0
+PC = 10 instr = 00 reg = 11 status = 0
+PC = 00 instr = 00 reg = 11 status = 0
+PC = 01 instr = 01 reg = 00 status = 1
+PC = 10 instr = 00 reg = 00 status = 1
+PC = 11 instr = 10 reg = 00 status = 1

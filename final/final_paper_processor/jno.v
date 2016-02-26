@@ -1,6 +1,10 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Module Name: jno.v
+// Description: from the current instructions, outputs ENABLE for checking and counter 
+//////////////////////////////////////////////////////////////////////////////////
+`timescale 1ns/1ns
 
-
-module jno(enabling, enabling_sta, openpulse, sta, instruct, pulses);
+module jno(enable, enable_status, openpulse, sta, instruct, pulses);
 
 //−−−−−−−−−−−−−Input Ports−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
 
@@ -10,8 +14,8 @@ input sta;
 
 //−−−−−−−−−−−−−Output Ports−−−−−−−−−−−−−−−−−−−−−−−−−−−−
 
-output enabling;
-output enabling_sta;
+output enable;
+output enable_status;
 output openpulse;
 
 //−−−−−−−−−−−−−Input ports Data Type−−−−−−−−−−−−−−−−−−−
@@ -22,13 +26,13 @@ wire sta;
 
 //−−−−−−−−−−−−−Output Ports Data Type−−−−−−−−−−−−−−−−−−
 // Output port can be a storage element (reg) or a wire
-wire enabling;
-wire enabling_sta;
+wire enable;
+wire enable_status;
 
 //−−−−−−−−−−−−−Intermediate Wires----−−−−−−−−−−−−−−−−−−
 reg s;
 reg r;
-wire notenabling, notenabling_sta;
+wire not_enable, not_enable_status;
 wire w1, w2;
 reg mem;
 reg pulser;
@@ -62,5 +66,7 @@ begin
 	#1
 	pulser = 0;
 end
-dff dff3(pulser, s, r, w1, enabling, notenabling); //enabling the checking
-dff dff4(pulser, s, r, w2, enabling_sta, notenabling_sta); //enabling for counter
+dff_reset_negedge dff3(pulser, s, r, w1, enable, not_enable); //enabling the checking
+dff_reset_negedge dff4(pulser, s, r, w2, enable_status, not_enable_status); //enabling for counter
+
+endmodule
