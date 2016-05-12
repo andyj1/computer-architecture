@@ -1,0 +1,42 @@
+%% Compile and read me!
+
+\documentclass[9pt,letterpaper]{article}
+\usepackage{lscape}
+\begin{document}
+
+% An extra wide table 
+\begin{landscape}
+
+\centering
+Controlpath logic table\\
+\ \\
+\begin{center}
+\begin{tabular}{|cllllllllllllll|}
+\hline
+instruction & type & jctrl & jalctrl & jrctrl & beqctrl & sltctrl & ractrl & nextctrl & memwrite & memread & memtoreg & ALUop & ALUsrc & regwrite \\
+
+\hline 
+add    & R & 0 & 0 & 0 & 0 & 00 & 0 & 00 & 0 & 0 & 00 & 000 & 0 & 1\\
+nand   & R & 0 & 0 & 0 & 0 & 00 & 0 & 00 & 0 & 0 & 00 & 001 & 0 & 1\\
+slt\_0 & R & 0 & 0 & 0 & 0 & 10 & 0 & 00 & 0 & 0 & 00 & 010 & 0 & 1\\
+slt\_1 & R & 0 & 0 & 0 & 0 & 11 & 0 & 00 & 0 & 0 & 00 & 010 & 0 & 1\\
+sl     & R & 0 & 0 & 0 & 0 & 00 & 0 & 00 & 0 & 0 & 00 & 011 & 0 & 1\\
+sr     & R & 0 & 0 & 0 & 0 & 00 & 0 & 00 & 0 & 0 & 00 & 100 & 0 & 1\\
+lw     & I & 0 & 0 & 0 & 0 & 00 & 0 & 01 & 0 & 1 & 01 & 111 & 1 & 1\\
+sw     & I & 0 & 0 & 0 & 0 & 00 & 0 & 01 & 1 & 0 & 00 & 111 & 1 & 0\\
+addi   & I & 0 & 0 & 0 & 0 & 00 & 0 & 00 & 0 & 0 & 00 & 100 & 1 & 1\\
+jr     &JR & 0 & 0 & 1 & 0 & 00 & 1 & 00 & 0 & 0 & 00 & 000 & 0 & 0\\
+beq    & J & 1 & 1 & 0 & 1 & 00 & 0 & 00 & 0 & 0 & 00 & 101 & 0 & 0\\
+jal    & J & 0 & 1 & 0 & 0 & 00 & 0 & 10 & 0 & 0 & 10 & 000 & 0 & 0\\
+
+
+\hline 
+\end{tabular}
+\end{center}
+\end{landscape}
+
+
+\end{document}
+
+
+

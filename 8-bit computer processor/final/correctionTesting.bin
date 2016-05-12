@@ -1,0 +1,19 @@
+01101010
+01101010
+10100101
+00010110
+00110110
+01000110
+01010110
+10110011
+
+shift sp by 1
+shift sp by 1		correct
+addi s2 s2			correct
+add s2 sp 			data(rt) = data(rs)+data(rt)
+nand s2 sp			data(rt) = nand(rs,rt)
+slt_0 s2 sp			correct (Assumed)
+slt_1 s2 sp			correct (Assumed)
+//beq 1100 (-6)		correct				11011001
+//jal 11000 (-6)	correct				11111000
+jr					correct

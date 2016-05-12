@@ -1,0 +1,28 @@
+.data
+.byte num 5
+.text
+la $sp num
+lw 0 $s1
+nand $s2 $sp
+addi -2 $sp
+jal SUM
+jal DONE
+SUM: addi -2 $sp
+sw 0 $ra
+sw 1 $s1
+slt_0 $s2 $s1
+beq LOOP
+addi 1 $s1
+addi 1 $sp
+addi 1 $sp
+jr $ra
+DONE: jal DONNER
+LOOP: addi -1 $s1
+jal SUM
+lw 0 $ra
+lw 1 $s2
+addi 1 $sp
+addi 1 $sp
+add $s2 $s1
+jr $ra
+DONNER: sw 0 $s2

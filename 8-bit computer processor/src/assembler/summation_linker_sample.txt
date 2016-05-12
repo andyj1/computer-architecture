@@ -1,0 +1,40 @@
+00000101
+.text
+sl $sp $sp	
+sl $sp $sp	
+addi 1 $sp	
+sl $sp $sp	done
+sl $sp $sp	
+sl $sp $sp	
+addi 1 $sp	
+sl $sp $sp	done
+addi 1 $sp	done
+sl $sp $sp	done
+sl $sp $sp	done
+addi 1 $sp	done
+lw 0 $s1	done
+nand $sp $s2	done
+addi 1 $s2	done
+sw 0 $s1	done
+addi -1 $sp	10101110
+jal 2		done
+jal 10		11101010
+addi -2 $sp	10101010
+sw 0 $ra	10010011
+sw 1 $s1	10010100
+slt_0 $s1 $s0	01000100
+beq 6		11000110
+addi 1 $s0	10100100
+addi 1 $sp	10100110
+addi 1 $sp	10100110
+jr $ra		10110011
+jal 9		11101001
+addi -1 $s1	10101100
+jal -11		11110101
+lw 0 $ra	10000011
+lw 1 $s1	10000101
+addi 1 $sp	10100110
+addi 1 $sp	10100110
+add $s1 $s2	00010100
+jr $ra
+sw 0 $s1
